@@ -100,6 +100,7 @@ namespace Presentacion
                     {
                         Form1 mainMenu = new Form1();
                         mainMenu.Show();
+                        mainMenu.FormClosed += Logout;
                         this.Hide();
                     }
                     else
@@ -117,6 +118,16 @@ namespace Presentacion
         {
             lblMessageError.Text = "    " + msg;
             lblMessageError.Visible = true;
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtPassword.Text = "CONTRASEÑA";
+            txtPassword.UseSystemPasswordChar = false;
+            txtUser.Text = "USUARIO";
+            lblMessageError.Visible=false;
+            this.Show();
+            txtUser.Focus();
         }
     }
 }

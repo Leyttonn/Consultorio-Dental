@@ -7,6 +7,7 @@ namespace Datos
         public ConexionToSql()
         {
             connectionString = "Server=ADMINISTRATOR\\WINCC;Database = loginUsuarios; integrated security = true";
+            /*connectionString = "Server=nombre de tu servidor = nombre de tu base de datos; integrated security = true";*/
         }
         protected SqlConnection GetConnection()
         {
