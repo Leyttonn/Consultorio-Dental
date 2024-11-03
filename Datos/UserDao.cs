@@ -17,7 +17,7 @@ namespace Datos
                 using (var command = connection.CreateCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from Usuarios where NombreUsuario=@user and Password=@pass;";
+                    command.CommandText = "select * from usuario where nombre_usuario=@user and password=@pass;";
                     command.Parameters.AddWithValue("@user", user);
                     command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.Text;
@@ -26,12 +26,12 @@ namespace Datos
                     {
                         while (reader.Read())
                         {
-                            UserLoginCache.UsuarioID = reader.GetInt32(0);
-                            UserLoginCache.NombreUsuario = reader.GetString(1);
-                            UserLoginCache.Email = reader.GetString(3);
-                            UserLoginCache.Nombre = reader.GetString(4);
-                            UserLoginCache.Apellido = reader.GetString(5);
-                            UserLoginCache.Estado = reader.GetBoolean(7);
+                            UserLoginCache.id_usuario = reader.GetInt32(0);
+                            UserLoginCache.nombre_usuario = reader.GetString(1);
+                            UserLoginCache.email = reader.GetString(3);
+                            UserLoginCache.nombre = reader.GetString(4);
+                            UserLoginCache.apellido = reader.GetString(5);
+                            UserLoginCache.estado = reader.GetBoolean(7);
                         }
                         return true;
                     }
@@ -46,11 +46,11 @@ namespace Datos
     }
     public static class UserLoginCache
     {
-        public static int UsuarioID { get; set; }
-        public static string NombreUsuario { get; set; }
-        public static string Email { get; set; }
-        public static string Nombre { get; set; }
-        public static string Apellido { get; set; }
-        public static bool Estado { get; set; }
+        public static int id_usuario { get; set; }
+        public static string nombre_usuario { get; set; }
+        public static string email { get; set; }
+        public static string nombre { get; set; }
+        public static string apellido { get; set; }
+        public static bool estado { get; set; }
     }
 }

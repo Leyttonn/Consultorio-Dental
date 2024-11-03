@@ -98,7 +98,7 @@ namespace Presentacion
                     var ValidLogin = user.LoginUser(txtUser.Text, txtPassword.Text);
                     if(ValidLogin == true)
                     {
-                        Form1 mainMenu = new Form1();
+                        FormPrincipal mainMenu = new FormPrincipal();
                         mainMenu.Show();
                         mainMenu.FormClosed += Logout;
                         this.Hide();
