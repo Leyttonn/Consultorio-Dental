@@ -120,7 +120,7 @@ namespace Presentacion
             // Si el formulario no existe
             if (formulario == null)
             {
-                formulario = new Form();
+                formulario = new MirForm();
                 formulario.TopLevel = false;
                 panelFormularios.Controls.Add(formulario);
                 panelFormularios.Tag = formulario;
