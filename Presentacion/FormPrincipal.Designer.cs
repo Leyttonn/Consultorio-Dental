@@ -35,6 +35,12 @@
             panelContenedor = new Panel();
             panelFormularios = new Panel();
             panelMenu = new Panel();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
+            button3 = new Button();
+            btnTratamiento = new Button();
+            btnPaciente = new Button();
             panel3 = new Panel();
             lblEmail = new TextBox();
             pictureBox1 = new PictureBox();
@@ -57,7 +63,7 @@
             // 
             btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(1172, 3);
+            btnCerrar.Location = new Point(1173, 3);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(25, 25);
             btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -80,9 +86,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(376, 210);
+            pictureBox2.Location = new Point(379, 178);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(191, 144);
+            pictureBox2.Size = new Size(181, 212);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
@@ -97,7 +103,7 @@
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(0, 0);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1200, 650);
+            panelContenedor.Size = new Size(1200, 651);
             panelContenedor.TabIndex = 3;
             // 
             // panelFormularios
@@ -105,21 +111,131 @@
             panelFormularios.BackColor = SystemColors.Control;
             panelFormularios.Controls.Add(pictureBox2);
             panelFormularios.Dock = DockStyle.Fill;
-            panelFormularios.Location = new Point(300, 40);
+            panelFormularios.Location = new Point(263, 40);
             panelFormularios.Name = "panelFormularios";
-            panelFormularios.Size = new Size(900, 610);
+            panelFormularios.Size = new Size(937, 611);
             panelFormularios.TabIndex = 8;
             // 
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(0, 124, 170);
+            panelMenu.Controls.Add(button4);
+            panelMenu.Controls.Add(button5);
+            panelMenu.Controls.Add(button6);
+            panelMenu.Controls.Add(button3);
+            panelMenu.Controls.Add(btnTratamiento);
+            panelMenu.Controls.Add(btnPaciente);
             panelMenu.Controls.Add(panel3);
             panelMenu.Controls.Add(btnLogout);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 40);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(300, 610);
+            panelMenu.Size = new Size(263, 611);
             panelMenu.TabIndex = 7;
+            // 
+            // button4
+            // 
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.Gainsboro;
+            button4.Location = new Point(0, 390);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(263, 53);
+            button4.TabIndex = 9;
+            button4.Text = "button1";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.Gainsboro;
+            button5.Location = new Point(0, 337);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(263, 53);
+            button5.TabIndex = 10;
+            button5.Text = "button1";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.ForeColor = Color.Gainsboro;
+            button6.Location = new Point(0, 284);
+            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(263, 53);
+            button6.TabIndex = 11;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.Gainsboro;
+            button3.Location = new Point(0, 231);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(263, 53);
+            button3.TabIndex = 4;
+            button3.Text = "button1";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // btnTratamiento
+            // 
+            btnTratamiento.Dock = DockStyle.Top;
+            btnTratamiento.FlatAppearance.BorderSize = 0;
+            btnTratamiento.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            btnTratamiento.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnTratamiento.FlatStyle = FlatStyle.Flat;
+            btnTratamiento.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTratamiento.ForeColor = Color.Gainsboro;
+            btnTratamiento.Location = new Point(0, 178);
+            btnTratamiento.Margin = new Padding(3, 4, 3, 4);
+            btnTratamiento.Name = "btnTratamiento";
+            btnTratamiento.Size = new Size(263, 53);
+            btnTratamiento.TabIndex = 4;
+            btnTratamiento.Text = "Tratamiento";
+            btnTratamiento.UseVisualStyleBackColor = true;
+            btnTratamiento.Click += btnTratamiento_Click;
+            // 
+            // btnPaciente
+            // 
+            btnPaciente.Dock = DockStyle.Top;
+            btnPaciente.FlatAppearance.BorderSize = 0;
+            btnPaciente.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            btnPaciente.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnPaciente.FlatStyle = FlatStyle.Flat;
+            btnPaciente.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPaciente.ForeColor = Color.Gainsboro;
+            btnPaciente.Location = new Point(0, 125);
+            btnPaciente.Margin = new Padding(3, 4, 3, 4);
+            btnPaciente.Name = "btnPaciente";
+            btnPaciente.Size = new Size(263, 53);
+            btnPaciente.TabIndex = 4;
+            btnPaciente.Text = "Paciente";
+            btnPaciente.UseVisualStyleBackColor = true;
+            btnPaciente.Click += btnPaciente_Click;
             // 
             // panel3
             // 
@@ -131,7 +247,7 @@
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(300, 125);
+            panel3.Size = new Size(263, 125);
             panel3.TabIndex = 8;
             // 
             // lblEmail
@@ -139,18 +255,18 @@
             lblEmail.BackColor = Color.FromArgb(0, 100, 150);
             lblEmail.BorderStyle = BorderStyle.None;
             lblEmail.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblEmail.Location = new Point(129, 85);
+            lblEmail.Location = new Point(97, 84);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(140, 19);
+            lblEmail.Size = new Size(154, 19);
             lblEmail.TabIndex = 4;
             lblEmail.Text = "Email";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(39, 25);
+            pictureBox1.Location = new Point(14, 17);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(84, 67);
+            pictureBox1.Size = new Size(77, 87);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -160,9 +276,9 @@
             lblId.BackColor = Color.FromArgb(0, 100, 150);
             lblId.BorderStyle = BorderStyle.None;
             lblId.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblId.Location = new Point(129, 19);
+            lblId.Location = new Point(97, 17);
             lblId.Name = "lblId";
-            lblId.Size = new Size(140, 19);
+            lblId.Size = new Size(154, 19);
             lblId.TabIndex = 4;
             lblId.Text = "Id";
             // 
@@ -171,19 +287,24 @@
             lblNombre.BackColor = Color.FromArgb(0, 100, 150);
             lblNombre.BorderStyle = BorderStyle.None;
             lblNombre.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNombre.Location = new Point(129, 52);
+            lblNombre.Location = new Point(97, 51);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(140, 19);
+            lblNombre.Size = new Size(154, 19);
             lblNombre.TabIndex = 4;
             lblNombre.Text = "Nombre";
             // 
             // btnLogout
             // 
             btnLogout.Dock = DockStyle.Bottom;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            btnLogout.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLogout.Location = new Point(0, 560);
+            btnLogout.ForeColor = Color.Gainsboro;
+            btnLogout.Location = new Point(0, 558);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(300, 50);
+            btnLogout.Size = new Size(263, 53);
             btnLogout.TabIndex = 3;
             btnLogout.Text = "Log Out";
             btnLogout.UseVisualStyleBackColor = true;
@@ -201,15 +322,15 @@
             panelBarraTitulo.TabIndex = 6;
             panelBarraTitulo.MouseMove += panelBarraTitulo_MouseMove_1;
             // 
-            // Form1
+            // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 650);
+            ClientSize = new Size(1200, 651);
             Controls.Add(panelContenedor);
             FormBorderStyle = FormBorderStyle.None;
-            MinimumSize = new Size(650, 650);
-            Name = "Form1";
+            MinimumSize = new Size(650, 651);
+            Name = "FormPrincipal";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
@@ -240,5 +361,11 @@
         private TextBox lblNombre;
         private Button btnLogout;
         private Panel panelBarraTitulo;
+        private Button button3;
+        private Button btnTratamiento;
+        private Button btnPaciente;
+        private Button button4;
+        private Button button5;
+        private Button button6;
     }
 }

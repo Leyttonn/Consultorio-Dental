@@ -102,6 +102,17 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void btnPaciente_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Paciente>();
+
+        }
+
+        private void btnTratamiento_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Tratamiento>();
+        }
+
         private void AbrirFormulario<MirForm>() where MirForm : Form, new()
         {
             Form formulario;
@@ -114,6 +125,7 @@ namespace Presentacion
                 panelFormularios.Controls.Add(formulario);
                 panelFormularios.Tag = formulario;
                 formulario.Show();
+                formulario.BringToFront();
             }
             // Si el formulario existe
             else
