@@ -64,7 +64,7 @@ namespace Datos
                 }
             }
         }*/
-        public void AgregarPaciente(string nombre, string apellido, DateTime fechaNacimiento, string telefono, string email)
+        public void AgregarPacienteConHistorial(string nombre, string apellido, DateTime fechaNacimiento, string telefono, string email)
         {
             using (var connection = GetConnection())
             {
@@ -297,6 +297,9 @@ namespace Datos
             }
             return table;
         }
+
+
+
 
 
 

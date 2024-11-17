@@ -28,7 +28,7 @@ namespace Presentacion
             string email = txtEmail.Text;
 
             UserDao dao = new UserDao();
-            dao.AgregarPaciente(nombre, apellido, fechaNacimiento, telefono, email);
+            dao.AgregarPacienteConHistorial(nombre, apellido, fechaNacimiento, telefono, email);
 
             // Refresca el DataGridView después de agregar el paciente
             CargarPacientes();

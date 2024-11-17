@@ -19,6 +19,15 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        private void CargarTratamientos()
+        {
+            int idHistorial = ObtenerIdHistorialSeleccionado(); // Implementa este método
+            UserDao dao = new UserDao();
+            DataTable tratamientos = dao.ObtenerTratamientosPorHistorial(idHistorial);
+            dgvTratamientos.DataSource = tratamientos;
+        }
+
+
 
 
         private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
@@ -39,6 +48,10 @@ namespace Presentacion
             DataTable pacientesFiltrados = dao.FiltrarPacientesPorNombre(nombre);
             dgvHistorial.DataSource = pacientesFiltrados;
         }
+
+
+
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
