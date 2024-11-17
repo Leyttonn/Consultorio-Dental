@@ -113,6 +113,11 @@ namespace Presentacion
             AbrirFormulario<Tratamiento>();
         }
 
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Historial_Clinico>();
+        }
+
         private void AbrirFormulario<MirForm>() where MirForm : Form, new()
         {
             Form formulario;

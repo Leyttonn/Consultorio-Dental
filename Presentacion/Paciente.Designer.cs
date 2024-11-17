@@ -41,12 +41,8 @@
             txtDate = new DateTimePicker();
             btnGuardar = new Button();
             dgvPaciente = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
-            Apellido = new DataGridViewTextBoxColumn();
-            Fecha_Nacimiento = new DataGridViewTextBoxColumn();
-            Telefono = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
+            btnEditar = new Button();
+            btnEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPaciente).BeginInit();
             SuspendLayout();
             // 
@@ -95,7 +91,7 @@
             txtApellido.Location = new Point(178, 143);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(125, 27);
-            txtApellido.TabIndex = 1;
+            txtApellido.TabIndex = 2;
             // 
             // label4
             // 
@@ -113,7 +109,7 @@
             txtTelefono.Location = new Point(446, 96);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(125, 27);
-            txtTelefono.TabIndex = 1;
+            txtTelefono.TabIndex = 3;
             // 
             // label5
             // 
@@ -131,7 +127,7 @@
             txtEmail.Location = new Point(446, 146);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(125, 27);
-            txtEmail.TabIndex = 1;
+            txtEmail.TabIndex = 4;
             // 
             // label6
             // 
@@ -149,73 +145,77 @@
             txtDate.Location = new Point(615, 144);
             txtDate.Name = "txtDate";
             txtDate.Size = new Size(276, 27);
-            txtDate.TabIndex = 2;
+            txtDate.TabIndex = 6;
             // 
             // btnGuardar
             // 
+            btnGuardar.BackColor = Color.FromArgb(0, 124, 170);
+            btnGuardar.FlatAppearance.BorderSize = 0;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGuardar.ForeColor = SystemColors.Control;
             btnGuardar.Location = new Point(237, 199);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(94, 29);
-            btnGuardar.TabIndex = 3;
+            btnGuardar.TabIndex = 6;
             btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // dgvPaciente
             // 
             dgvPaciente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPaciente.BackgroundColor = SystemColors.ButtonFace;
             dgvPaciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPaciente.Columns.AddRange(new DataGridViewColumn[] { ID, Nombre, Apellido, Fecha_Nacimiento, Telefono, Email });
             dgvPaciente.Dock = DockStyle.Bottom;
-            dgvPaciente.Location = new Point(0, 288);
+            dgvPaciente.Location = new Point(0, 284);
             dgvPaciente.Name = "dgvPaciente";
             dgvPaciente.RowHeadersWidth = 51;
             dgvPaciente.RowTemplate.Height = 29;
-            dgvPaciente.Size = new Size(919, 276);
+            dgvPaciente.Size = new Size(919, 280);
             dgvPaciente.TabIndex = 4;
+            dgvPaciente.CellClick += dgvPaciente_CellClick;
+            dgvPaciente.CellContentClick += dgvPaciente_CellContentClick;
             // 
-            // ID
+            // btnEditar
             // 
-            ID.HeaderText = "ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
+            btnEditar.BackColor = Color.FromArgb(0, 124, 170);
+            btnEditar.FlatAppearance.BorderSize = 0;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEditar.ForeColor = SystemColors.Control;
+            btnEditar.Location = new Point(388, 199);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(94, 29);
+            btnEditar.TabIndex = 7;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // Nombre
+            // btnEliminar
             // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            // 
-            // Apellido
-            // 
-            Apellido.HeaderText = "Apellido";
-            Apellido.MinimumWidth = 6;
-            Apellido.Name = "Apellido";
-            // 
-            // Fecha_Nacimiento
-            // 
-            Fecha_Nacimiento.HeaderText = "Fecha_Nac";
-            Fecha_Nacimiento.MinimumWidth = 6;
-            Fecha_Nacimiento.Name = "Fecha_Nacimiento";
-            // 
-            // Telefono
-            // 
-            Telefono.HeaderText = "Telefono";
-            Telefono.MinimumWidth = 6;
-            Telefono.Name = "Telefono";
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
+            btnEliminar.BackColor = Color.FromArgb(0, 124, 170);
+            btnEliminar.FlatAppearance.BorderSize = 0;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliminar.ForeColor = SystemColors.Control;
+            btnEliminar.Location = new Point(532, 199);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(94, 29);
+            btnEliminar.TabIndex = 8;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // Paciente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.FromArgb(0, 122, 204);
             ClientSize = new Size(919, 564);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
             Controls.Add(dgvPaciente);
             Controls.Add(btnGuardar);
             Controls.Add(txtDate);
@@ -231,6 +231,7 @@
             Controls.Add(label1);
             Name = "Paciente";
             Text = "Paciente";
+            Load += Paciente_Load;
             ((System.ComponentModel.ISupportInitialize)dgvPaciente).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -251,11 +252,7 @@
         private DateTimePicker txtDate;
         private Button btnGuardar;
         private DataGridView dgvPaciente;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Apellido;
-        private DataGridViewTextBoxColumn Fecha_Nacimiento;
-        private DataGridViewTextBoxColumn Telefono;
-        private DataGridViewTextBoxColumn Email;
+        private Button btnEditar;
+        private Button btnEliminar;
     }
 }

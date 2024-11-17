@@ -35,10 +35,11 @@
             panelContenedor = new Panel();
             panelFormularios = new Panel();
             panelMenu = new Panel();
+            btnAñadir = new Button();
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
-            button3 = new Button();
+            btnHistorial = new Button();
             btnTratamiento = new Button();
             btnPaciente = new Button();
             panel3 = new Panel();
@@ -119,10 +120,11 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(0, 124, 170);
+            panelMenu.Controls.Add(btnAñadir);
             panelMenu.Controls.Add(button4);
             panelMenu.Controls.Add(button5);
             panelMenu.Controls.Add(button6);
-            panelMenu.Controls.Add(button3);
+            panelMenu.Controls.Add(btnHistorial);
             panelMenu.Controls.Add(btnTratamiento);
             panelMenu.Controls.Add(btnPaciente);
             panelMenu.Controls.Add(panel3);
@@ -133,6 +135,19 @@
             panelMenu.Size = new Size(263, 611);
             panelMenu.TabIndex = 7;
             // 
+            // btnAñadir
+            // 
+            btnAñadir.Dock = DockStyle.Bottom;
+            btnAñadir.FlatAppearance.BorderSize = 0;
+            btnAñadir.FlatStyle = FlatStyle.Flat;
+            btnAñadir.ForeColor = Color.SeaShell;
+            btnAñadir.Location = new Point(0, 518);
+            btnAñadir.Name = "btnAñadir";
+            btnAñadir.Size = new Size(263, 40);
+            btnAñadir.TabIndex = 4;
+            btnAñadir.Text = "Añadir";
+            btnAñadir.UseVisualStyleBackColor = true;
+            // 
             // button4
             // 
             button4.Dock = DockStyle.Top;
@@ -142,10 +157,10 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.Gainsboro;
-            button4.Location = new Point(0, 390);
+            button4.Location = new Point(0, 375);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(263, 53);
+            button4.Size = new Size(263, 50);
             button4.TabIndex = 9;
             button4.Text = "button1";
             button4.UseVisualStyleBackColor = true;
@@ -159,10 +174,10 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.Gainsboro;
-            button5.Location = new Point(0, 337);
+            button5.Location = new Point(0, 325);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
-            button5.Size = new Size(263, 53);
+            button5.Size = new Size(263, 50);
             button5.TabIndex = 10;
             button5.Text = "button1";
             button5.UseVisualStyleBackColor = true;
@@ -176,30 +191,31 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.Gainsboro;
-            button6.Location = new Point(0, 284);
+            button6.Location = new Point(0, 275);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
-            button6.Size = new Size(263, 53);
+            button6.Size = new Size(263, 50);
             button6.TabIndex = 11;
             button6.Text = "button6";
             button6.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnHistorial
             // 
-            button3.Dock = DockStyle.Top;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.Gainsboro;
-            button3.Location = new Point(0, 231);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(263, 53);
-            button3.TabIndex = 4;
-            button3.Text = "button1";
-            button3.UseVisualStyleBackColor = true;
+            btnHistorial.Dock = DockStyle.Top;
+            btnHistorial.FlatAppearance.BorderSize = 0;
+            btnHistorial.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            btnHistorial.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnHistorial.FlatStyle = FlatStyle.Flat;
+            btnHistorial.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHistorial.ForeColor = Color.Gainsboro;
+            btnHistorial.Location = new Point(0, 225);
+            btnHistorial.Margin = new Padding(3, 4, 3, 4);
+            btnHistorial.Name = "btnHistorial";
+            btnHistorial.Size = new Size(263, 50);
+            btnHistorial.TabIndex = 4;
+            btnHistorial.Text = "Historial Clinico";
+            btnHistorial.UseVisualStyleBackColor = true;
+            btnHistorial.Click += btnHistorial_Click;
             // 
             // btnTratamiento
             // 
@@ -210,10 +226,10 @@
             btnTratamiento.FlatStyle = FlatStyle.Flat;
             btnTratamiento.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnTratamiento.ForeColor = Color.Gainsboro;
-            btnTratamiento.Location = new Point(0, 178);
+            btnTratamiento.Location = new Point(0, 175);
             btnTratamiento.Margin = new Padding(3, 4, 3, 4);
             btnTratamiento.Name = "btnTratamiento";
-            btnTratamiento.Size = new Size(263, 53);
+            btnTratamiento.Size = new Size(263, 50);
             btnTratamiento.TabIndex = 4;
             btnTratamiento.Text = "Tratamiento";
             btnTratamiento.UseVisualStyleBackColor = true;
@@ -231,7 +247,7 @@
             btnPaciente.Location = new Point(0, 125);
             btnPaciente.Margin = new Padding(3, 4, 3, 4);
             btnPaciente.Name = "btnPaciente";
-            btnPaciente.Size = new Size(263, 53);
+            btnPaciente.Size = new Size(263, 50);
             btnPaciente.TabIndex = 4;
             btnPaciente.Text = "Paciente";
             btnPaciente.UseVisualStyleBackColor = true;
@@ -361,11 +377,12 @@
         private TextBox lblNombre;
         private Button btnLogout;
         private Panel panelBarraTitulo;
-        private Button button3;
+        private Button btnHistorial;
         private Button btnTratamiento;
         private Button btnPaciente;
         private Button button4;
         private Button button5;
         private Button button6;
+        private Button btnAñadir;
     }
 }
